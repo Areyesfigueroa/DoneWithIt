@@ -1,15 +1,21 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, Button, Alert, Platform, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform, StatusBar, View, Dimensions } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
 export default function App() {
   
+  // console.log(Dimensions.get("screen"));
+  const {landscape} = useDeviceOrientation();
 
   return (
     <SafeAreaView style={styles.container}>
-      <Button 
-        title={"Click me"}
-        onPress={() => console.log("Pressed")}
-      />
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        width: '100%',
+        height: landscape ? '30%' : '100%'
+      }}>
+
+      </View>
     </SafeAreaView>
   );
 }
@@ -17,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'white',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight: 0
   },
 });
