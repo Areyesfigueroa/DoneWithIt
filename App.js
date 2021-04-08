@@ -9,32 +9,52 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{
-        backgroundColor: 'purple',
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: "center"
-      }}>
-        <View style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-          flexDirection: 'row',
-          alignSelf: "flex-start"
-        }}>
-        </View>
-        <View style={{
-          backgroundColor: "gold",
-          width: 100,
-          height: 100
-        }}></View>        
-        <View style={{
-          backgroundColor: "tomato",
-          width: 100,
-          height: 100
-        }}>
-      </View>
+      <View
+        style={{
+          backgroundColor: "purple",
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: 'wrap',
+          alignContent: 'center'
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "gold",
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "tomato",
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "gray",
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "lime",
+            width: 100,
+            height: 100,
+          }}
+        ></View>
       </View>
     </SafeAreaView>
   );
